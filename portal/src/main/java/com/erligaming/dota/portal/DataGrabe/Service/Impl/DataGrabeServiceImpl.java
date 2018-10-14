@@ -32,7 +32,7 @@ public class DataGrabeServiceImpl implements DataGrabeService {
     }
 
     @Override
-    public ResponseVO getMatchHistory(String matchId) {
+    public ResponseVO getMatchHistory(Long matchId) {
         String url = buildUrl(DotaUrlEnum.MatchHistory.getUrl(),dotaApiKey)+"&match_id="+matchId;
         JSONObject body = null;
         try {
@@ -50,7 +50,7 @@ public class DataGrabeServiceImpl implements DataGrabeService {
 
 
     private String buildUrl(String url,String apiKey){
-        return DotaUrlEnum.BaseUrl.getUrl()+url+"?key="+apiKey;
+        return DotaUrlEnum.BaseUrl.getUrl()+url+"?key="+apiKey.trim();
     }
 
 

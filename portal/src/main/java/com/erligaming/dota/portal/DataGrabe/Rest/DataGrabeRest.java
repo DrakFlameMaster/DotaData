@@ -27,7 +27,7 @@ public class DataGrabeRest {
 
     @RequestMapping("/getMatchHistory/{steamGameId}")
     @ResponseBody
-    public ResponseVO dataInfoGrabe(@PathVariable("steamGameId") String userId) {
+    public ResponseVO dataInfoGrabe(@PathVariable("steamGameId") Long userId) {
         logger.info("[查询比赛记录]开始");
         ResponseVO response;
         try{

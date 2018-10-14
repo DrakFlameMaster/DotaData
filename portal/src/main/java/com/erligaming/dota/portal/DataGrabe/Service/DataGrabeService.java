@@ -12,6 +12,6 @@ public interface DataGrabeService {
 
 
 
-    public ResponseVO getMatchHistory(String userId);
+    public ResponseVO getMatchHistory(Long userId);
 
 }

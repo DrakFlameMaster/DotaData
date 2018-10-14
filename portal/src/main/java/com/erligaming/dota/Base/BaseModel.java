@@ -11,7 +11,7 @@ public class BaseModel {
 
     protected String sysState = "1";
 
-    protected  Date createTime = new Date();
+    protected Date createTime = new Date();
 
     protected Date modifyTime = new Date();
 
