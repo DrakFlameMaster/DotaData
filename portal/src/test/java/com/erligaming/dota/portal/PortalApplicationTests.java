@@ -3,6 +3,7 @@ package com.erligaming.dota.portal;
 import com.erligaming.dota.Util.JacksonUtil;
 import com.erligaming.dota.dao.UserDaoMapper;
 import com.erligaming.dota.model.entity.UserEntity;
+import org.apache.catalina.User;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
@@ -18,6 +19,9 @@ public class PortalApplicationTests {
 	@Autowired
 	SqlSessionFactory sqlSessionFactory;
 
+	@Autowired
+	UserDaoMapper userDaoMapper;
+
 	@Test
 	public void contextLoads() {
 	}
@@ -26,8 +30,9 @@ public class PortalApplicationTests {
 	public void selectUser(){
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
-			UserDaoMapper mapper = session.getMapper(UserDaoMapper.class);
-			UserEntity user = mapper.selectByPrimaryKey(1L);
+			UserEntity user = userDaoMapper.selectByPrimaryKey(1L);
+//			UserDaoMapper mapper = session.getMapper(UserDaoMapper.class);
+//			UserEntity user = mapper.selectByPrimaryKey(1L);
 			System.out.println(JacksonUtil.toJson(user));
 
 		} finally {
