@@ -1,0 +1,16 @@
+.text-nav{
+    color: #fff !important;
+}
+
+.container-height{
+    height: 100%;
+    /*padding-right: 15px;*/
+    padding-top: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.Body{
+    /*margin-top:40px;*/
+    padding-top:150px;
+}
