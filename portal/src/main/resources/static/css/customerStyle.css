@@ -14,3 +14,9 @@
     /*margin-top:40px;*/
     padding-top:150px;
 }
+
+.index-searchbar{
+    padding-top: 40px;
+    margin:auto !important;
+    vertical-align: middle;
+}
