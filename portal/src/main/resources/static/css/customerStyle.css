@@ -16,7 +16,14 @@
 }
 
 .index-searchbar{
-    padding-top: 40px;
-    margin:auto !important;
-    vertical-align: middle;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.searchbar-class{
+    padding-top:100px;
+}
+
+.first-div{
+    height:90%;
 }
