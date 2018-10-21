@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.erligaming.dota.dao.LoginDaoMapper">
+    <resultMap id="BaseResultMap" type="com.erligaming.dota.model.entity.UserEntity">
+        <id column = "pkid" jdbcType="INTEGER" property="pkid"/>
+        <result column = "name" jdbcType="VARCHAR" property="name"/>
+        <result column = "nick_name" jdbcType="VARCHAR" property="nickName"/>
+        <result column = "sex" jdbcType="CHAR" property="sex"/>
+        <result column = "phone" jdbcType="VARCHAR" property="phone" />
+        <result column = "email_address" jdbcType="VARCHAR" property="emailAddress"/>
+        <result column = "state" jdbcType="VARCHAR" property="state"/>
+        <result column = "version" jdbcType="INTEGER" property="version"/>
+        <result column = "remark" jdbcType="VARCHAR" property="remark"/>
+        <result column = "create_time" jdbcType="TIMESTAMP" property = "createTime"/>
+        <result column = "creator" jdbcType="VARCHAR" property="creator"/>
+        <result column = "modify_time" jdbcType="TIMESTAMP" property = "modifyTime"/>
+        <result column = "operator" jdbcType="VARCHAR" property="operator"/>
+        <result column = "sys_state" jdbcType="CHAR" property="sysState"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+      pkid, name, nick_name, sex, phone, email_address, state, version, remark, create_time, creator, modify_time, opeartor,
+      sys_state
+    </sql>
+    <sql id = "table">tdb_user</sql>
+
+
+
+
+
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select * from <include refid="table"/>  where pkid=#{id} and sys_state = 1
+    </select>
+</mapper>

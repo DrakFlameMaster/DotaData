@@ -12,6 +12,17 @@ public class Constants {
     public static final String SUCCESS_CODE = "0000";
 
     /**
+     * 正常状态 1
+     */
+    public static final String STATUS_NORMAL = "1";
+
+    /**
+     * 不正常状态 0
+     */
+    public static final String STATUS_INNORMAL = "0";
+
+
+    /**
      * 操作成功状态：true
      */
     public static final Boolean OPERATE_SUCESS_STATUS = true;
